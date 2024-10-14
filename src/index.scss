@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$pri: #db3a4d;
+$bg: #27232f;
+$bg_sec: #201d26;
+$bg_gradient: #27232f #3f3654;
+
+body {
+  background: $bg;
+}
+
+.k2d {
+  font-family: "K2D", sans-serif;
+}
+
+.text-border {
+  color: rgba(0, 0, 0, 0); /* Text color */
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255); /* Border size and color */
+  opacity: 70%;
+}
+
+.glow-effect {
+  filter: drop-shadow(0 -10px 5px #db3a4d50);
+}
