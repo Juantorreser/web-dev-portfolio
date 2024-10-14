@@ -24,3 +24,10 @@ body {
 .glow-effect {
   filter: drop-shadow(0 -10px 5px #db3a4d50);
 }
+
+.btn-pri{
+  background: $pri;
+  padding-block: 10px;
+  padding-inline: 15px;
+  border-radius: 3px;
+}
