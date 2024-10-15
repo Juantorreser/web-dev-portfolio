@@ -27,8 +27,7 @@ const Hero = () => {
           <path
             d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z"
             className="shape-fill"
-            fill="#201d26"
-            fill-opacity="1"></path>
+            fill="#201d26"></path>
         </svg>
       </div>
     </section>
