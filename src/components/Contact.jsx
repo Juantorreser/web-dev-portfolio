@@ -1,73 +1,148 @@
 // src/components/Contact.jsx
-import React from "react";
+import React, {useState} from "react";
 
 const Contact = () => {
-    return (
-      <section id="contact" className="py-28 k2d text-white/95">
-        <div className="container mx-auto px-4">
-          <h2 className="sectionTitle text-4xl font-bold text-center mb-12">Contact Me</h2>
-          <form className="max-w-lg mx-auto">
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-3 py-2 border rounded-lg"
-                placeholder="Your Name"
-              />
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    const {value, name} = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+    setFormData({
+      email: "",
+      name: "",
+      phone: "",
+      subject: "",
+      message: "",
+    });
+  };
+
+  return (
+    <section id="contact" className="py-28 k2d text-white/95 bg-bg_sec">
+      <div className="w-full">
+        <h2 className="sectionTitle text-4xl font-bold text-center mb-12">Contact Me</h2>
+
+        <form className="px-10" onSubmit={handleSubmit}>
+          {/* Grid */}
+          <div className="flex flex-col lg:flex-row lg:gap-10 lg:px-10 lg:mb-6">
+            {/* Col 1 */}
+            <div className="flex flex-col w-full lg:w-[50%]">
+              <div className="relative z-0 w-full mb-5 ">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-pri/50 dark:focus:border-pri focus:outline-none focus:ring-0 peer"
+                  placeholder=" "
+                  required
+                  onChange={handleChange}
+                  value={formData.email}
+                />
+                <label
+                  htmlFor="email"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-pri peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">
+                  Email
+                </label>
+              </div>
+              <div className="relative z-0 w-full mb-5 ">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-pri/50 dark:focus:border-pri focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                  onChange={handleChange}
+                  value={formData.name}
+                />
+                <label
+                  htmlFor="name"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-pri peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">
+                  Name
+                </label>
+              </div>
+              <div className="relative z-0 w-full mb-5 ">
+                <input
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  name="phone"
+                  id="phone"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-pri/50 dark:focus:border-pri focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                  onChange={handleChange}
+                  value={formData.phone}
+                />
+                <label
+                  htmlFor="phone"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-pri peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">
+                  Phone number (123-456-7890)
+                </label>
+              </div>
+              <div className="relative z-0 w-full mb-5 lg:mb-0 ">
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-pri/50 dark:focus:border-pri focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                  onChange={handleChange}
+                  value={formData.subject}
+                />
+                <label
+                  htmlFor="subject"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-pri peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">
+                  Subject
+                </label>
+              </div>
             </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-3 py-2 border rounded-lg"
-                placeholder="Your Email"
-              />
+            {/* Col 2 */}
+            <div className="flex w-full lg:w-[50%] lg:flex-grow">
+              <div className="relative z-0 w-full mb-5 lg:h-full">
+                <textarea
+                  type="text"
+                  name="message"
+                  id="message"
+                  className="h-full block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-pri/50 dark:focus:border-pri focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                  onChange={handleChange}
+                  value={formData.message}
+                />
+                <label
+                  htmlFor="message"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-pri peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">
+                  Message
+                </label>
+              </div>
             </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-                Phone
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                className="w-full px-3 py-2 border rounded-lg"
-                placeholder="Your Phone Number"
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subject">
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                className="w-full px-3 py-2 border rounded-lg"
-                placeholder="Subject"
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                id="message"
-                className="w-full px-3 py-2 border rounded-lg"
-                rows="5"
-                placeholder="Your Message"></textarea>
-            </div>
-            <button className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">
+          </div>
+
+          {/* Button */}
+          <div className="w-full flex justify-center items-center">
+            <button
+              type="submit"
+              className="text-white bg-pri hover:bg-pri/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full sm:w-auto px-8 py-3 text-center">
               Send Message
             </button>
-          </form>
-        </div>
-      </section>
-    );
+          </div>
+        </form>
+      </div>
+    </section>
+  );
 };
 
 export default Contact;
