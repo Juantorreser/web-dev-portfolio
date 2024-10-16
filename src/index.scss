@@ -11,7 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   background: $bg;
 }
@@ -102,7 +101,7 @@ body {
   }
 }
 
-.backdrop{
+.backdrop {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -110,4 +109,17 @@ body {
   left: 0;
   background: #00000099;
   z-index: 0;
+}
+
+.sectionTitle {
+  position: relative;
+  font-family: "K2D", sans-serif;
+  &::before {
+    content: "< ";
+    color: #302c38;
+  }
+  &::after {
+    content: " />";
+    color: #302c38;
+  }
 }
