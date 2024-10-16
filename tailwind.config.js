@@ -6,7 +6,7 @@ export default {
       colors: {
         pri: "#DB3A4D",
         bg: "#27232F",
-        bg_sec: "#201D26",
+        bg_sec: "#1f1c25",
       },
     },
   },

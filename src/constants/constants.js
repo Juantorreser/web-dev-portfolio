@@ -1,13 +1,26 @@
-//About Me Info
+//Resume Info
 const profile = {
   age: 20,
   city: "Victoria, BC",
   email: "Jdtorreser@gmail.com",
 };
 const softSkills = ["Teamwork", "Adaptability", "Communication", "Leadership"];
-const lenguages = ["English", "Spanish"];
-const education = [];
-const experience = [];
-const technicalSkills = [];
+const languages = ["English", "Spanish"];
+const education = [
+  {title: "Information & Computer Systems", location: "Victoria, BC", start: 2023, end: 2025},
+];
+const experience = [{title: "Spotynet, Mexico City", desc: "Description", start: 2022, end: 2024}];
+const technicalSkills = [
+  {name: "HTML", rating: 9},
+  {name: "CSS", rating: 9},
+  {name: "Tailwind CSS", rating: 9},
+  {name: "Javascript", rating: 8},
+  {name: "React Js", rating: 7},
+  {name: "Next Js", rating: 6},
+  {name: "React Native", rating: 4},
+  {name: "Java", rating: 4},
+  {name: "Python", rating: 4},
+];
 
-export const AboutMeInfo = {profile, softSkills, lenguages};
+export const ResumeInfo = {profile, softSkills, languages, education, experience, technicalSkills};
+// End of Resume Info

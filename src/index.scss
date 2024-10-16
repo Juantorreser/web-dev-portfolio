@@ -4,7 +4,7 @@
 
 $pri: #db3a4d;
 $bg: #27232f;
-$bg_sec: #201d26;
+$bg_sec: #1f1c25;
 $bg_gradient: #27232f, #3f3654;
 
 html {
@@ -123,3 +123,35 @@ body {
     color: #302c38;
   }
 }
+
+.resumeCard {
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    margin-bottom: 5px;
+    h1 {
+      font-family: "k2d";
+      font-weight: 700;
+      font-size: 1.5rem;
+      padding: 0;
+      margin: 0;
+      white-space: nowrap;
+    }
+    .line {
+      margin-bottom: 10px;
+      margin-left: 15px;
+      border-radius: 1px;
+      flex-grow: 1;
+      height: 3px;
+      background: $pri;
+    }
+  }
+}
+
+.rating-div{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+

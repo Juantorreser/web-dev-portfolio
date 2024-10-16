@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className=" py-28 bg-bg_sec text-white">
+    <section id="about" className=" py-28 bg-bg_sec text-white/95">
       <h2 className="sectionTitle text-4xl font-bold text-center">About Me</h2>
       <div className="container mx-auto px-4  flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-20">
         <img src="about.png" alt="About Me" width={450} />
