@@ -1,5 +1,5 @@
 import React from "react";
-import ResumeCard from "./ui/ResumeCard";
+import ResumeCard from "./ui/ResumeCard.jsx";
 import {ResumeInfo} from "../constants/constants";
 import TechSkill from "./ui/TechSkill";
 
