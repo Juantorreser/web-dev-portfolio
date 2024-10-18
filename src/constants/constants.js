@@ -1,5 +1,6 @@
 //Resume Info
 const profile = {
+  name: "Juan David Torres",
   age: 20,
   city: "Victoria, BC",
   email: "Jdtorreser@gmail.com",
@@ -9,7 +10,14 @@ const languages = ["English", "Spanish"];
 const education = [
   {title: "Information & Computer Systems", location: "Victoria, BC", start: 2023, end: 2025},
 ];
-const experience = [{title: "Spotynet, Mexico City", desc: "Description", start: 2022, end: 2024}];
+const experience = [
+  {
+    title: "Spotynet, Mexico City",
+    desc: "Work as UX/UI Designer for first 6 months. Designed the UX/UI design for 2 mobile apps. Switch role to front-end developer jr. and collaborate in development of 3 websites and 1 mobile app. Recently started collaborating in back-end as well and develop a full-stack web-app dashboard for a security company ",
+    start: 2022,
+    end: 2024,
+  },
+];
 const technicalSkills = [
   {name: "HTML", rating: 9},
   {name: "CSS", rating: 9},
@@ -39,7 +47,7 @@ export const projects = [
     name: "Video Editor Portfolio",
     stack: "HTML5 | CSS | Tailwind | React | Typescript",
     codeLink: "https://github.com/Juantorreser/video-portfolio",
-    liveLink: "https://juantorreser.github.io/video-portfolio/",
+    liveLink: "https://torreser-video-editor.onrender.com",
     image: "/videoEditor.png",
   },
   {

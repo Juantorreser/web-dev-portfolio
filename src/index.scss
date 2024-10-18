@@ -38,6 +38,19 @@ body {
 
 #hero {
   background: linear-gradient(to top, $bg_gradient);
+  .heroImage {
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.4));
+    animation: heroImageAni 3s ease-in-out;
+    opacity: 95%;
+  }
+  @keyframes heroImageAni {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 95%;
+    }
+  }
 }
 
 #navbar {
@@ -149,9 +162,8 @@ body {
   }
 }
 
-.rating-div{
+.rating-div {
   width: 10px;
   height: 10px;
   border-radius: 50%;
 }
-

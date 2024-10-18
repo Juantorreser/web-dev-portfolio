@@ -79,11 +79,12 @@ const Navbar = () => {
                 <a href={item.href}>{item.name}</a>
               </li>
             ))}
-            <button
-              className="block md:hidden btn-pri text-white font-light w-44"
-              onClick={() => setMenuOpen(false)}>
-              <a href="#contact">Contact Me</a>
-            </button>
+            <a
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
+              className="block md:hidden btn-pri text-white font-light w-44">
+              Contact Me
+            </a>
           </ul>
           <div className="backdrop md:hidden" onClick={() => setMenuOpen(false)}></div>
         </>
