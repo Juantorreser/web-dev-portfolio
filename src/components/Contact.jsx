@@ -1,5 +1,6 @@
 // src/components/Contact.jsx
 import React, {useState} from "react";
+import emailjs from "emailjs-com"; // Import EmailJS SDK
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,14 +20,25 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    setFormData({
-      email: "",
-      name: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+
+    emailjs
+      .send("service_7my87xk", "template_6aymjkb", formData, "75zDHwPXrevEXYxj6")
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Email sent successfully!");
+        // Reset form
+        setFormData({
+          email: "",
+          name: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+        alert("Failed to send email. Please try again later.");
+      });
   };
 
   return (
@@ -34,7 +46,7 @@ const Contact = () => {
       <div className="w-full">
         <h2 className="sectionTitle text-4xl font-bold text-center mb-12">Contact Me</h2>
 
-        <form className="px-10" onSubmit={handleSubmit}>
+        <form className="px-10" id="contactForm" onSubmit={handleSubmit}>
           {/* Grid */}
           <div className="flex flex-col lg:flex-row lg:gap-10 lg:px-10 lg:mb-6">
             {/* Col 1 */}
