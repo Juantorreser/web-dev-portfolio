@@ -1,20 +1,61 @@
 // src/components/Hero.jsx
 import React from "react";
+import {motion} from "framer-motion";
 
 const Hero = () => {
+  const containerVariants = {
+    hidden: {opacity: 0, y: 20},
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.2,
+        duration: 0.2,
+        staggerChildren: 0.5, // Animates each child one after another
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: {opacity: 0, y: 20},
+    visible: {opacity: 1, y: 0},
+  };
   return (
     <section id="hero" className="h-screen flex items-center justify-center flex-col w-full">
-      <div className="text-center k2d h-[80%] flex justify-center items-center flex-col-reverse lg:flex-row">
-        <div className="left text-white">
-          <h1 className="text-xl opacity-70 font-light">Hi, my name is</h1>
-          <h2 className="text-5xl mt-4 font-semibold">JD TORRES</h2>
-          <h3 className="text-4xl mt-6 text-border font-black">Frontend Developer</h3>
-          <button className="mt-8 px-6 py-3 bg-pri rounded-lg shadow-md hover:opacity-75 transition">
+      <div className="text-center k2d h-[80%] gap-10 flex justify-center items-center flex-col-reverse lg:flex-row">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="left text-white">
+          <motion.h1 className="text-xl xl:text-2xl opacity-70 font-light" variants={itemVariants}>
+            Hi, my name is
+          </motion.h1>
+
+          <motion.h2 className="text-5xl xl:text-7xl mt-4 font-semibold" variants={itemVariants}>
+            JD TORRES
+          </motion.h2>
+
+          <motion.h3
+            className="text-4xl xl:text-6xl mt-6 text-border font-black"
+            variants={itemVariants}>
+            Frontend Developer
+          </motion.h3>
+
+          <motion.button
+            className="mt-8 px-6 py-3 bg-pri rounded-lg shadow-md hover:opacity-75 transition"
+            whileHover={{scale: 1.05}} // Adds hover animation
+            whileTap={{scale: 0.95}} // Adds tap animation
+            variants={itemVariants}>
             <a href="#about">Learn More</a>
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
         <div className="right">
-          <img src="/hero.png" alt="" width={500} />
+          <img
+            src="/hero.png"
+            alt="Hero Image"
+            className="heroImage w-[500px] lg:w-[350px] xl:w-[650px]"
+          />
         </div>
       </div>
       <div className="heroDivider h-[21%] w-full bottom-0 absolute flex justify-end">

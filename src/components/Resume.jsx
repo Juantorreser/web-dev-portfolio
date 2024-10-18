@@ -10,10 +10,14 @@ const Resume = () => {
       <div className="container mx-auto px-4">
         <h2 className="sectionTitle text-4xl font-bold text-center mb-12">Resume</h2>
         <div className="flex flex-col lg:flex-row gap-8 w-full">
-          <div className="flex flex-col gap-6 lg:w-2/5 flex-grow">
+          <div className="flex flex-col gap-6 lg:w-2/6 flex-grow">
             {/* Profile */}
-            <ResCard title="Profile" image="/profilePic.jpeg" name="Juan David Torres">
+            <ResCard title="Profile" name="Juan David Torres">
               <ul>
+                <li>
+                  <span className="font-medium mr-2 text-lg">Name: </span>
+                  {profile.name}
+                </li>
                 <li>
                   <span className="font-medium mr-2 text-lg">Age: </span>
                   {profile.age}
@@ -52,7 +56,7 @@ const Resume = () => {
             </ResCard>
           </div>
 
-          <div className="flex flex-col gap-6 lg:w-3/5 flex-grow">
+          <div className="flex flex-col gap-6 lg:w-4/6 flex-grow">
             {/* Education */}
             <ResCard title="Education">
               <ul>
