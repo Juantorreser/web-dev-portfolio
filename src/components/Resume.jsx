@@ -1,7 +1,7 @@
 import React from "react";
-import ResumeCard from "./ui/ResumeCard.jsx";
 import {ResumeInfo} from "../constants/constants";
 import TechSkill from "./ui/TechSkill";
+import ResCard from "./ui/ResCard.jsx";
 
 const Resume = () => {
   const {profile, softSkills, languages, education, experience, technicalSkills} = ResumeInfo;
@@ -12,7 +12,7 @@ const Resume = () => {
         <div className="flex flex-col lg:flex-row gap-8 w-full">
           <div className="flex flex-col gap-6 lg:w-2/5 flex-grow">
             {/* Profile */}
-            <ResumeCard title="Profile" image="/profilePic.jpeg" name="Juan David Torres">
+            <ResCard title="Profile" image="/profilePic.jpeg" name="Juan David Torres">
               <ul>
                 <li>
                   <span className="font-medium mr-2 text-lg">Age: </span>
@@ -27,9 +27,9 @@ const Resume = () => {
                   {profile.city}
                 </li>
               </ul>
-            </ResumeCard>
+            </ResCard>
             {/* Soft Skills */}
-            <ResumeCard title="Soft Skills">
+            <ResCard title="Soft Skills">
               <ul>
                 {softSkills.map((skill) => (
                   <li key={skill}>
@@ -38,9 +38,9 @@ const Resume = () => {
                   </li>
                 ))}
               </ul>
-            </ResumeCard>
+            </ResCard>
             {/* Languages */}
-            <ResumeCard title="Languages">
+            <ResCard title="Languages">
               <ul>
                 {languages.map((language) => (
                   <li key={language}>
@@ -49,12 +49,12 @@ const Resume = () => {
                   </li>
                 ))}
               </ul>
-            </ResumeCard>
+            </ResCard>
           </div>
 
           <div className="flex flex-col gap-6 lg:w-3/5 flex-grow">
             {/* Education */}
-            <ResumeCard title="Education">
+            <ResCard title="Education">
               <ul>
                 {education.map((item) => (
                   <li key={item.title} className="flex flex-col w-full">
@@ -66,10 +66,10 @@ const Resume = () => {
                   </li>
                 ))}
               </ul>
-            </ResumeCard>
+            </ResCard>
 
             {/* Experience */}
-            <ResumeCard title="Experience">
+            <ResCard title="Experience">
               <ul>
                 {experience.map((item) => (
                   <li key={item.title} className="flex flex-col w-full">
@@ -81,10 +81,10 @@ const Resume = () => {
                   </li>
                 ))}
               </ul>
-            </ResumeCard>
+            </ResCard>
 
             {/* Technical Skills */}
-            <ResumeCard title="Technical Skills">
+            <ResCard title="Technical Skills">
               <ul>
                 {technicalSkills.map((skill) => (
                   <li key={skill.name}>
@@ -92,7 +92,7 @@ const Resume = () => {
                   </li>
                 ))}
               </ul>
-            </ResumeCard>
+            </ResCard>
           </div>
         </div>
       </div>
