@@ -21,23 +21,26 @@ const Hero = () => {
     visible: {opacity: 1, y: 0},
   };
   return (
-    <section id="hero" className=" h-dvh flex items-center justify-center flex-col w-full">
+    <section id="hero" className=" h-svh flex items-center justify-center flex-col w-full">
       <div className="text-center k2d h-[80%] gap-10 flex justify-center items-center flex-col-reverse lg:flex-row">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={containerVariants}
           className="left text-white">
-          <motion.h1 className="text-sm md:text-lg xl:text-2xl opacity-70 font-light" variants={itemVariants}>
+          <motion.h1
+            className="text-sm md:text-lg xl:text-2xl opacity-70 font-light"
+            variants={itemVariants}>
             Hi, my name is
           </motion.h1>
 
-          <motion.h2 className="text-4xl lg:text-5xl xl:text-7xl mt-4 font-semibold" variants={itemVariants}>
+          <motion.h2
+            className="text-4xl lg:text-5xl xl:text-7xl mt-4 font-semibold"
+            variants={itemVariants}>
             JD TORRES
           </motion.h2>
 
           <motion.h3
-            className="text-xl xl:text-6xl mt-6 text-border font-black"
             className="text-xl xl:text-6xl mt-6 text-border font-black"
             variants={itemVariants}>
             Frontend Developer
