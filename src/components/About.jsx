@@ -20,7 +20,7 @@ const About = () => {
           quality. <br />
           <div className="w-full h-[2px] bg-bg my-2"></div>
           <span className=" font-semibold text-pri text-lg italic">
-            Let’s make your dreams come true!
+            Let’s Work Together!
           </span>
         </p>
       </div>

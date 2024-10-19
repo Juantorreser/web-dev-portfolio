@@ -43,7 +43,7 @@ const Hero = () => {
           <motion.h3
             className="text-xl lg:text-4xl xl:text-6xl mt-2 text-border font-black"
             variants={itemVariants}>
-            Frontend Developer
+            Web Developer
           </motion.h3>
 
           <motion.button
