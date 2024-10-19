@@ -28,16 +28,16 @@ const Hero = () => {
           animate="visible"
           variants={containerVariants}
           className="left text-white">
-          <motion.h1 className="text-xl xl:text-2xl opacity-70 font-light" variants={itemVariants}>
+          <motion.h1 className="text-sm xl:text-2xl opacity-70 font-light" variants={itemVariants}>
             Hi, my name is
           </motion.h1>
 
-          <motion.h2 className="text-5xl xl:text-7xl mt-4 font-semibold" variants={itemVariants}>
+          <motion.h2 className="text-3xl xl:text-7xl mt-4 font-semibold" variants={itemVariants}>
             JD TORRES
           </motion.h2>
 
           <motion.h3
-            className="text-4xl xl:text-6xl mt-6 text-border font-black"
+            className="text-xl xl:text-6xl mt-6 text-border font-black"
             variants={itemVariants}>
             Frontend Developer
           </motion.h3>
