@@ -6,7 +6,7 @@ import ResCard from "./ui/ResCard.jsx";
 const Resume = () => {
   const {profile, softSkills, languages, education, experience, technicalSkills} = ResumeInfo;
   return (
-    <section id="resume" className="pt-28 text-white/95 k2d">
+    <section id="resume" className="pt-28 text-white/95 k2d bg-bg">
       <div className="container mx-auto px-4">
         <h2 className="sectionTitle text-4xl font-bold text-center mb-12">Resume</h2>
         <div className="flex flex-col lg:flex-row gap-8 w-full">
