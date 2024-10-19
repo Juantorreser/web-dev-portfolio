@@ -21,7 +21,7 @@ const Hero = () => {
     visible: {opacity: 1, y: 0},
   };
   return (
-    <section id="hero" className="h-screen flex items-center justify-center flex-col w-full">
+    <section id="hero" className="h-dvh flex items-center justify-center flex-col w-full">
       <div className="text-center k2d h-[80%] gap-10 flex justify-center items-center flex-col-reverse lg:flex-row">
         <motion.div
           initial="hidden"
