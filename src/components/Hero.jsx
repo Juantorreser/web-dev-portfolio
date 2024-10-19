@@ -22,7 +22,7 @@ const Hero = () => {
   };
   return (
     <section id="hero" className=" h-svh flex items-center justify-center flex-col w-full">
-      <div className="text-center k2d h-[80%] gap-10 flex justify-center items-center flex-col-reverse lg:flex-row">
+      <div className="text-center k2d h-[80%] gap-2 lg:gap-10 flex justify-center items-center flex-col-reverse lg:flex-row">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -35,19 +35,19 @@ const Hero = () => {
           </motion.h1>
 
           <motion.h2
-            className="text-4xl lg:text-5xl xl:text-7xl mt-4 font-semibold"
+            className="text-2xl md:text-4xl lg:text-5xl xl:text-7xl  lg:mt-2 font-semibold"
             variants={itemVariants}>
             JD TORRES
           </motion.h2>
 
           <motion.h3
-            className="text-xl xl:text-6xl mt-6 text-border font-black"
+            className="text-lg md:text-xl lg:text-3xl xl:text-6xl lg:mt-2 text-border font-black"
             variants={itemVariants}>
             Frontend Developer
           </motion.h3>
 
           <motion.button
-            className="mt-8 px-6 py-3 bg-pri rounded-lg shadow-md hover:opacity-75 transition"
+            className="mt-4 lg:mt-7 px-6 py-3 bg-pri rounded-lg shadow-md hover:opacity-75 transition"
             whileHover={{scale: 1.05}} // Adds hover animation
             whileTap={{scale: 0.95}} // Adds tap animation
             variants={itemVariants}>
@@ -58,7 +58,7 @@ const Hero = () => {
           <img
             src="/hero.png"
             alt="Hero Image"
-            className="heroImage w-[250px] lg:w-[350px] xl:w-[650px]"
+            className="heroImage w-[220px] md:w-[260px] lg:w-[350px] xl:w-[650px]"
           />
         </div>
       </div>

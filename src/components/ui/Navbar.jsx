@@ -82,7 +82,7 @@ const Navbar = () => {
             <a
               href="#contact"
               onClick={() => setMenuOpen(false)}
-              className="block md:hidden btn-pri text-white font-light w-44">
+              className="block md:hidden btn-pri text-white font-light w-44 text-center">
               Contact Me
             </a>
           </ul>
