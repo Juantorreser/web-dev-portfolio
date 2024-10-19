@@ -7,8 +7,8 @@ const About = () => {
       <h2 className="sectionTitle text-4xl font-bold text-center">About Me</h2>
       <div className="mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-20 w-full py-8">
         {/* <img src="about.png" alt="About Me" width={450} /> */}
-        <AboutCard className="w-3/5" />
-        <p className=" w-2/5 ">
+        <AboutCard className="w-3/4 md:w-3/5" />
+        <p className=" w-3/4 mt-5 md:mt-0 md:w-2/5 ">
           I'm a Colombian web developer with a passion for creating clean, efficient, and visually
           appealing digital experiences. <br />
           <div className="w-full h-[2px] bg-bg my-2"></div>
