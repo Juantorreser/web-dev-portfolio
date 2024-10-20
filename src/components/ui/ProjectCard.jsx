@@ -28,7 +28,7 @@ const ProjectCard = ({project}) => {
             alt="Project Image"
             style={{
               width: "100%", // The image will use the full width of its container
-              height: "350px", // Set the fixed height for the image
+              height: "auto", // Set the fixed height for the image
               objectFit: "cover", // Ensures the image covers the area without distortion
             }}
             className="rounded"

@@ -51,11 +51,19 @@ export const projects = [
     image: "/videoEditor.png",
   },
   {
-    name: "Airline Flights Dashboard",
+    name: "Fake Airline Flights Dashboard",
     stack: "HTML5 | CSS | Javascript | Bootstrap",
     codeLink: "https://github.com/Juantorreser/airline-dashboard",
     liveLink: "https://juantorreser.github.io/airline-dashboard/",
     image: "/airline.png",
+  },
+  {
+    name: "Healthy Fork, Mobile App UX/UI Design",
+    stack: "Figma",
+    codeLink: "",
+    liveLink:
+      "https://www.figma.com/proto/mD4fIuo1xqh5yZGGbrEvI6/Healthy-fork?node-id=0-1&t=IQYynROGsq450w0I-1",
+    image: "/healthyFork.png",
   },
   // {
   //   name: "Delivery Food Web-App",
